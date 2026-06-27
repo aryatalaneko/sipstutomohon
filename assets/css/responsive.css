@@ -1,0 +1,334 @@
+/* 
+  SIPSTU Tomohon - Global Responsive Stylesheet
+  Menangani breakpoints untuk Tablet (< 992px) dan Mobile (< 576px)
+*/
+
+@media (max-width: 991px) {
+  /* Layout global: ubah dari horizontal flex menjadi susunan vertikal */
+  body {
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+  
+  .layout {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    width: 100vw !important;
+  }
+
+  .main {
+    height: auto !important;
+    overflow: visible !important;
+    min-height: calc(100vh - 60px);
+    display: block !important;
+  }
+
+  .content {
+    padding: 16px 16px 24px !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* Sidebar: ubah menjadi laci navigasi seluler (Offcanvas/Drawer) */
+  .sidebar {
+    position: fixed !important;
+    left: -255px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 250px !important;
+    z-index: 1050 !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.25) !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+  }
+
+  .sidebar.show {
+    left: 0 !important;
+  }
+
+  /* Overlay latar belakang saat sidebar aktif */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 22, 40, 0.5);
+    z-index: 1040;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(2px);
+  }
+
+  .sidebar-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Topbar: jadikan sticky di atas agar menu hamburger selalu terjangkau */
+  .topbar {
+    padding: 0 16px !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    background: white !important;
+  }
+
+  /* Tombol Menu Hamburger */
+  .hamburger-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    padding: 8px;
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+
+  .hamburger-btn:hover {
+    background: var(--surface);
+  }
+
+  .hamburger-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Penyesuaian Grid & Kolom */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .grid-3-1 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .grid-3-2 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Topbar wrapping pada layar kecil */
+  .topbar {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    min-height: 60px !important;
+    padding: 10px 16px !important;
+    gap: 8px !important;
+  }
+
+  .topbar-right {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+    justify-content: flex-end !important;
+  }
+
+  .period-select {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .btn-primary {
+    white-space: nowrap !important;
+    font-size: 11px !important;
+    padding: 6px 12px !important;
+  }
+
+  /* Balita item: jangan potong teks */
+  .balita-item {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .balita-right {
+    margin-left: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+    padding-left: 46px !important;
+  }
+
+  /* Tabel: pastikan kolom tidak terpotong */
+  .kel-table {
+    min-width: 600px !important;
+  }
+
+  /* Welcome Banner */
+  .welcome-banner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    padding: 16px !important;
+  }
+
+  .welcome-stats {
+    width: 100% !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+  
+  .welcome-divider {
+    display: none !important;
+  }
+
+  .welcome-stat {
+    flex: 1 !important;
+    text-align: center !important;
+    padding: 8px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+  }
+
+  /* Koordinat input kelurahan */
+  .coord-inputs {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .coord-inputs .coord-field {
+    width: 100% !important;
+  }
+
+  /* Detail riwayat balita grid */
+  .detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Metrics Grid (Hasil Klasifikasi) */
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  /* Peta Layout Responsif */
+  .map-content-layout {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    padding: 12px !important;
+    gap: 12px !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  #map {
+    flex: 0 0 auto !important;
+    height: 380px !important;
+    min-height: 380px !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .map-panel {
+    width: 100% !important;
+    border-left: none !important;
+    border-top: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    height: auto !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+  }
+
+  .panel-body {
+    max-height: 380px !important;
+    overflow-y: auto !important;
+  }
+}
+
+@media (max-width: 575px) {
+  /* Ponsel Pintar / Small Devices */
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .topbar-sub {
+    display: none !important;
+  }
+  
+  .topbar-right {
+    gap: 8px !important;
+  }
+
+  /* Donut chart layout */
+  .donut-wrap {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .donut {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .donut::after {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  /* Laporan & Filter */
+  .filter-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  
+  .filter-row .btn, .filter-row select {
+    width: 100% !important;
+  }
+
+  .card-header-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  .card-header-flex .btn {
+    width: 100% !important;
+  }
+
+  .card-custom-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+}
+
+/* Fix Bootstrap Modal agar scrollable di mobile */
+.modal-dialog {
+  margin: 0.5rem !important;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px !important;
+    margin: 1.75rem auto !important;
+  }
+}
+
+/* Mencegah card melimpah */
+.card-custom {
+  max-width: 100% !important;
+  overflow: hidden !important;
+}

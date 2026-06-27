@@ -898,268 +898,229 @@
 
 <body>
 
-	<div class="layout">
-		<!-- SIDEBAR -->
-		<aside class="sidebar">
-			<div class="sidebar-logo">
-				<div class="logo-badge">
-					<div class="logo-icon">ST</div>
-					<div>
-						<div class="logo-text">SIPSTU</div>
-						<div class="logo-sub">Dinkes Kota Tomohon</div>
-					</div>
-				</div>
-			</div>
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-badge">
+          <div class="logo-icon">ST</div>
+          <div>
+            <div class="logo-text">SIPSTU</div>
+            <div class="logo-sub">Dinkes Kota Tomohon</div>
+          </div>
+        </div>
+      </div>
 
-			<div class="sidebar-section">
-				<div class="sidebar-label">Utama</div>
-				<a href="<?= base_url() ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<rect x="3" y="3" width="7" height="7" rx="1.5" stroke-width="1.8" />
-						<rect x="14" y="3" width="7" height="7" rx="1.5" stroke-width="1.8" />
-						<rect x="3" y="14" width="7" height="7" rx="1.5" stroke-width="1.8" />
-						<rect x="14" y="14" width="7" height="7" rx="1.5" stroke-width="1.8" />
-					</svg>
-					Dashboard
-				</a>
-				<a href="<?= base_url('akun') ?>" class="nav-item active">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-						<path stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-					</svg>
-					Pengaturan Akun
-				</a>
-				<a href="<?= base_url('welcome/peta_kelurahan') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-						<circle cx="12" cy="9" r="2.5" stroke-width="1.8" />
-					</svg>
-					Peta per Kelurahan
-				</a>
-				<a href="<?= base_url('welcome/peta_puskesmas') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-					</svg>
-					Peta per Puskesmas
-				</a>
-			</div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Utama</div>
+        <a href="<?= base_url() ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" stroke-width="1.8" />
+            <rect x="14" y="3" width="7" height="7" rx="1.5" stroke-width="1.8" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" stroke-width="1.8" />
+            <rect x="14" y="14" width="7" height="7" rx="1.5" stroke-width="1.8" />
+          </svg>
+          Dashboard
+        </a>
+        <a href="<?= base_url('akun') ?>" class="nav-item active">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            <path stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          Pengaturan Akun
+        </a>
+        <a href="<?= base_url('welcome/peta_kelurahan') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" stroke-width="1.8" />
+          </svg>
+          Peta per Kelurahan
+        </a>
+        <a href="<?= base_url('welcome/peta_puskesmas') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+          Peta per Puskesmas
+        </a>
+      </div>
 
-			<div class="sidebar-section">
-				<div class="sidebar-label">Analitik</div>
-				<a href="<?= base_url('welcome/grafik_kelurahan') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-					</svg>
-					Grafik per Kelurahan
-				</a>
-				<a href="<?= base_url('welcome/grafik_puskesmas') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M16 8v8m-4-5v5m-4-2v2M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-					</svg>
-					Grafik per Puskesmas
-				</a>
-			</div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Analitik</div>
+        <a href="<?= base_url('welcome/grafik_kelurahan') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+          Grafik per Kelurahan
+        </a>
+        <a href="<?= base_url('welcome/grafik_puskesmas') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M16 8v8m-4-5v5m-4-2v2M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Grafik per Puskesmas
+        </a>
+      </div>
 
-			<div class="sidebar-section">
-				<div class="sidebar-label">Laporan</div>
-				<a href="<?= base_url('welcome/laporan_kelurahan') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-					</svg>
-					Laporan per Kelurahan
-				</a>
-				<a href="<?= base_url('welcome/laporan_puskesmas') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-					</svg>
-					Laporan per Puskesmas
-				</a>
-			</div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Laporan</div>
+        <a href="<?= base_url('welcome/laporan_kelurahan') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Laporan per Kelurahan
+        </a>
+        <a href="<?= base_url('welcome/laporan_puskesmas') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Laporan per Puskesmas
+        </a>
+      </div>
 
-			<div class="sidebar-section">
-				<div class="sidebar-label">Kelola</div>
-				<a href="<?= base_url('puskesmas_admin') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-					</svg>
-					Manajemen Puskesmas
-				</a>
-				<a href="<?= base_url('kelurahan_admin') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-					</svg>
-					Manajemen Kelurahan
-				</a>
-			</div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Kelola</div>
+        <a href="<?= base_url('puskesmas_admin') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+          Manajemen Puskesmas
+        </a>
+        <a href="<?= base_url('kelurahan_admin') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Manajemen Kelurahan
+        </a>
+      </div>
 
-			<div class="sidebar-footer">
-				<div class="user-card">
-					<div class="avatar">SA</div>
-					<div>
-						<div class="user-name">Super Admin</div>
-						<div class="user-role">Dinas Kesehatan</div>
-					</div>
-				</div>
-				<a href="<?= base_url('auth/logout') ?>" class="nav-item text-danger mt-2"
-					style="background: rgba(239, 68, 68, 0.1);">
-					<svg class="icon text-danger" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-					</svg>
-					Keluar
-				</a>
-			</div>
-		</aside>
+      <div class="sidebar-footer">
+        <div class="user-card">
+          <div class="avatar">SA</div>
+          <div>
+            <div class="user-name">Super Admin</div>
+            <div class="user-role">Dinas Kesehatan</div>
+          </div>
+        </div>
+        <a href="<?= base_url('auth/logout') ?>" class="nav-item text-danger mt-2"
+          style="background: rgba(239, 68, 68, 0.1);">
+          <svg class="icon text-danger" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          Keluar
+        </a>
+      </div>
+    </aside>
 
-		<!-- MAIN CONTENT -->
-		<div class="main">
-			<!-- TOPBAR -->
-			<div class="topbar">
-				<button id="menuToggle" onclick="toggleSidebar()" style="display:none;background:none;border:none;padding:4px 8px 4px 0;cursor:pointer;" aria-label="Buka menu">
-					<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#475569">
-						<path stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
-					</svg>
-				</button>
-				<div>
-					<span class="topbar-title">Pengaturan Akun</span>
-					<span class="topbar-sub">— Kelola profil & password</span>
-				</div>
-				<div class="topbar-right">
-					<div class="btn-notif">
-						<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#64748b">
-							<path stroke-width="1.8" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-						</svg>
-						<div class="notif-dot"></div>
-					</div>
-				</div>
-			</div>
+    <!-- MAIN CONTENT -->
+    <div class="main">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div>
+          <span class="topbar-title">Pengaturan Akun</span>
+          <span class="topbar-sub">— Kelola profil dan keamanan akun</span>
+        </div>
+      </div>
 
-			<!-- CONTENT -->
+      <!-- CONTENT -->
+      <div class="content">
 
-			<!-- CONTENT -->
-			<div class="content">
+        <!-- ALERTS -->
+        <?php if($this->session->flashdata('success')): ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert" style="font-size: 13px;">
+                <?= $this->session->flashdata('success') ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="font-size: 10px;"></button>
+            </div>
+        <?php endif; ?>
+        <?php if($this->session->flashdata('error')): ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" style="font-size: 13px;">
+                <?= $this->session->flashdata('error') ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="font-size: 10px;"></button>
+            </div>
+        <?php endif; ?>
 
-				<!-- ALERTS -->
-				<?php if ($this->session->flashdata('success')): ?>
-					<div class="alert alert-success alert-dismissible fade show" role="alert" style="font-size: 13px;">
-						<?= $this->session->flashdata('success') ?>
-						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="font-size: 10px;"></button>
-					</div>
-				<?php endif; ?>
-				<?php if ($this->session->flashdata('error')): ?>
-					<div class="alert alert-danger alert-dismissible fade show" role="alert" style="font-size: 13px;">
-						<?= $this->session->flashdata('error') ?>
-						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="font-size: 10px;"></button>
-					</div>
-				<?php endif; ?>
+        <div class="grid-2">
+            <div class="card-custom">
+                <div class="card-custom-header">
+                    <div>
+                        <h5 class="card-custom-title">Ubah Password</h5>
+                        <div class="card-custom-sub">Pastikan password baru Anda aman.</div>
+                    </div>
+                </div>
+                <div class="card-custom-body">
+                    <form action="<?= base_url('akun/update_password') ?>" method="POST">
+                        <div class="mb-3">
+                            <label class="form-label" style="font-size: 12px; font-weight: 500; color: var(--text-secondary);">Password Lama</label>
+                            <input type="password" name="old_password" class="form-control" style="font-size: 13px; padding: 10px 14px; border-radius: 8px;" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" style="font-size: 12px; font-weight: 500; color: var(--text-secondary);">Password Baru</label>
+                            <input type="password" name="new_password" class="form-control" style="font-size: 13px; padding: 10px 14px; border-radius: 8px;" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label" style="font-size: 12px; font-weight: 500; color: var(--text-secondary);">Konfirmasi Password Baru</label>
+                            <input type="password" name="confirm_password" class="form-control" style="font-size: 13px; padding: 10px 14px; border-radius: 8px;" required>
+                        </div>
+                        <button type="submit" class="btn w-100" style="background: var(--blue-600); color: white; border: none; padding: 10px; font-size: 13px; font-weight: 600; border-radius: 8px;">Simpan Perubahan</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="card-custom">
+                 <div class="card-custom-header">
+                    <div>
+                        <h5 class="card-custom-title">Informasi Akun</h5>
+                        <div class="card-custom-sub">Detail profil super admin</div>
+                    </div>
+                </div>
+                <div class="card-custom-body">
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                        <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--blue-100); color: var(--blue-700); display: flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 20px;">
+                            SA
+                        </div>
+                        <div>
+                            <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; color: var(--text-primary);">Super Admin</div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Dinas Kesehatan Kota Tomohon</div>
+                        </div>
+                    </div>
+                    
+                    <div style="border-top: 1px solid var(--border); padding-top: 16px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 13px;">
+                            <span style="color: var(--text-secondary);">Username</span>
+                            <span style="font-weight: 600; color: var(--text-primary);"><?= $user['username'] ?? 'superadmin' ?></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 13px;">
+                            <span style="color: var(--text-secondary);">Hak Akses</span>
+                            <span style="font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+                                <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--success);"></div>
+                                <?= $user['role'] ?? 'Super Admin' ?>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
 
-				<div class="grid-2">
-					<div class="card-custom">
-						<div class="card-custom-header">
-							<div>
-								<h5 class="card-custom-title">Ubah Password</h5>
-								<div class="card-custom-sub">Pastikan password baru Anda aman.</div>
-							</div>
-						</div>
-						<div class="card-custom-body">
-							<form action="<?= base_url('akun/update_password') ?>" method="POST">
-								<div class="mb-3">
-									<label class="form-label" style="font-size: 12px; font-weight: 500; color: var(--text-secondary);">Password Lama</label>
-									<input type="password" name="old_password" class="form-control" style="font-size: 13px; padding: 10px 14px; border-radius: 8px;" required>
-								</div>
-								<div class="mb-3">
-									<label class="form-label" style="font-size: 12px; font-weight: 500; color: var(--text-secondary);">Password Baru</label>
-									<input type="password" name="new_password" class="form-control" style="font-size: 13px; padding: 10px 14px; border-radius: 8px;" required>
-								</div>
-								<div class="mb-4">
-									<label class="form-label" style="font-size: 12px; font-weight: 500; color: var(--text-secondary);">Konfirmasi Password Baru</label>
-									<input type="password" name="confirm_password" class="form-control" style="font-size: 13px; padding: 10px 14px; border-radius: 8px;" required>
-								</div>
-								<button type="submit" class="btn w-100" style="background: var(--blue-600); color: white; border: none; padding: 10px; font-size: 13px; font-weight: 600; border-radius: 8px;">Simpan Perubahan</button>
-							</form>
-						</div>
-					</div>
+      <!-- FOOTER -->
+      <footer class="footer">
+        Copyright © 2026 <span>Teknik Elektro</span> - Politeknik Negeri Manado
+      </footer>
 
-					<div class="card-custom">
-						<div class="card-custom-header">
-							<div>
-								<h5 class="card-custom-title">Informasi Akun</h5>
-								<div class="card-custom-sub">Detail profil super admin</div>
-							</div>
-						</div>
-						<div class="card-custom-body">
-							<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-								<div style="width: 56px; height: 56px; border-radius: 50%; background: var(--blue-100); color: var(--blue-700); display: flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 20px;">
-									SA
-								</div>
-								<div>
-									<div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; color: var(--text-primary);">Super Admin</div>
-									<div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Dinas Kesehatan Kota Tomohon</div>
-								</div>
-							</div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
 
-							<div style="border-top: 1px solid var(--border); padding-top: 16px;">
-								<div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 13px;">
-									<span style="color: var(--text-secondary);">Username</span>
-									<span style="font-weight: 600; color: var(--text-primary);"><?= $user['username'] ?? 'superadmin' ?></span>
-								</div>
-								<div style="display: flex; justify-content: space-between; font-size: 13px;">
-									<span style="color: var(--text-secondary);">Hak Akses</span>
-									<span style="font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
-										<div style="width: 6px; height: 6px; border-radius: 50%; background: var(--success);"></div>
-										<?= $user['role'] ?? 'Super Admin' ?>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- FOOTER -->
-			<footer class="footer">
-				Copyright © 2026 <span>Teknik Elektro</span> - Politeknik Negeri Manado
-			</footer>
-
-		</div>
-	</div>
-	</div>
-	</div>
-	</div>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-	</div><!-- end .main -->
-	</div><!-- end .layout -->
-
-	<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-	<style>
-		@media (max-width: 768px) {
-			#menuToggle {
-				display: block !important;
-			}
-		}
-	</style>
-
-	<script>
-		function toggleSidebar() {
-			const sidebar = document.querySelector('.sidebar');
-			const overlay = document.getElementById('sidebarOverlay');
-			sidebar.classList.toggle('open');
-			overlay.classList.toggle('show');
-		}
-	</script>
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url('assets/js/responsive.js?v=1.4') ?>"></script>
 </body>
 
 </html>

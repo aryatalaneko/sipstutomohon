@@ -1005,509 +1005,489 @@
 
 <body>
 
-	<div class="layout">
-		<!-- SIDEBAR -->
-		<aside class="sidebar">
-			<div class="sidebar-logo">
-				<div class="logo-badge">
-					<div class="logo-icon">ST</div>
-					<div>
-						<div class="logo-text">SIPSTU</div>
-						<div class="logo-sub">Dinkes Kota Tomohon</div>
-					</div>
-				</div>
-			</div>
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-badge">
+          <div class="logo-icon">ST</div>
+          <div>
+            <div class="logo-text">SIPSTU</div>
+            <div class="logo-sub">Dinkes Kota Tomohon</div>
+          </div>
+        </div>
+      </div>
 
-			<div class="sidebar-section">
-				<div class="sidebar-label">Utama</div>
-				<a href="<?= base_url() ?>" class="nav-item active">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<rect x="3" y="3" width="7" height="7" rx="1.5" stroke-width="1.8" />
-						<rect x="14" y="3" width="7" height="7" rx="1.5" stroke-width="1.8" />
-						<rect x="3" y="14" width="7" height="7" rx="1.5" stroke-width="1.8" />
-						<rect x="14" y="14" width="7" height="7" rx="1.5" stroke-width="1.8" />
-					</svg>
-					Dashboard
-				</a>
-				<a href="<?= base_url('akun') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-						<path stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-					</svg>
-					Pengaturan Akun
-				</a>
-				<a href="<?= base_url('welcome/peta_kelurahan') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-						<circle cx="12" cy="9" r="2.5" stroke-width="1.8" />
-					</svg>
-					Peta per Kelurahan
-				</a>
-				<a href="<?= base_url('welcome/peta_puskesmas') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-					</svg>
-					Peta per Puskesmas
-				</a>
-			</div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Utama</div>
+        <a href="<?= base_url() ?>" class="nav-item active">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" stroke-width="1.8" />
+            <rect x="14" y="3" width="7" height="7" rx="1.5" stroke-width="1.8" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" stroke-width="1.8" />
+            <rect x="14" y="14" width="7" height="7" rx="1.5" stroke-width="1.8" />
+          </svg>
+          Dashboard
+        </a>
+                <a href="<?= base_url('akun') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            <path stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          Pengaturan Akun
+        </a>
+<a href="<?= base_url('welcome/peta_kelurahan') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+            <circle cx="12" cy="9" r="2.5" stroke-width="1.8" />
+          </svg>
+          Peta per Kelurahan
+        </a>
+        <a href="<?= base_url('welcome/peta_puskesmas') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+          Peta per Puskesmas
+        </a>
+      </div>
 
-			<div class="sidebar-section">
-				<div class="sidebar-label">Analitik</div>
-				<a href="<?= base_url('welcome/grafik_kelurahan') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-					</svg>
-					Grafik per Kelurahan
-				</a>
-				<a href="<?= base_url('welcome/grafik_puskesmas') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M16 8v8m-4-5v5m-4-2v2M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-					</svg>
-					Grafik per Puskesmas
-				</a>
-			</div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Analitik</div>
+        <a href="<?= base_url('welcome/grafik_kelurahan') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+          Grafik per Kelurahan
+        </a>
+        <a href="<?= base_url('welcome/grafik_puskesmas') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M16 8v8m-4-5v5m-4-2v2M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Grafik per Puskesmas
+        </a>
+      </div>
 
-			<div class="sidebar-section">
-				<div class="sidebar-label">Laporan</div>
-				<a href="<?= base_url('welcome/laporan_kelurahan') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-					</svg>
-					Laporan per Kelurahan
-				</a>
-				<a href="<?= base_url('welcome/laporan_puskesmas') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-					</svg>
-					Laporan per Puskesmas
-				</a>
-			</div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Laporan</div>
+        <a href="<?= base_url('welcome/laporan_kelurahan') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Laporan per Kelurahan
+        </a>
+        <a href="<?= base_url('welcome/laporan_puskesmas') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Laporan per Puskesmas
+        </a>
+      </div>
 
-			<div class="sidebar-section">
-				<div class="sidebar-label">Kelola</div>
-				<a href="<?= base_url('puskesmas_admin') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-					</svg>
-					Manajemen Puskesmas
-				</a>
-				<a href="<?= base_url('kelurahan_admin') ?>" class="nav-item">
-					<svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-					</svg>
-					Manajemen Kelurahan
-				</a>
-			</div>
-
-
+      <div class="sidebar-section">
+        <div class="sidebar-label">Kelola</div>
+        <a href="<?= base_url('puskesmas_admin') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+          Manajemen Puskesmas
+        </a>
+        <a href="<?= base_url('kelurahan_admin') ?>" class="nav-item">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Manajemen Kelurahan
+        </a>
+      </div>
 
 
 
 
 
-			<div class="sidebar-footer">
-				<div class="user-card">
-					<div class="avatar">SA</div>
-					<div>
-						<div class="user-name">Super Admin</div>
-						<div class="user-role">Dinas Kesehatan</div>
-					</div>
-				</div>
-				<a href="<?= base_url('auth/logout') ?>" class="nav-item text-danger mt-2"
-					style="background: rgba(239, 68, 68, 0.1);">
-					<svg class="icon text-danger" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-width="1.8"
-							d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-					</svg>
-					Keluar
-				</a>
-			</div>
-		</aside>
 
-		<!-- MAIN CONTENT -->
-		<div class="main">
-			<!-- TOPBAR -->
-			<div class="topbar">
-				<button id="menuToggle" onclick="toggleSidebar()" style="display:none;background:none;border:none;padding:4px 8px 4px 0;cursor:pointer;" aria-label="Buka menu">
-					<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#475569">
-						<path stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
-					</svg>
-				</button>
-				<div>
-					<span class="topbar-title">Dashboard</span>
-					<span class="topbar-sub">— Ringkasan Stunting Kota Tomohon</span>
-				</div>
-				<div class="topbar-right">
-					<select class="period-select focus-ring" style="--bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25)">
-						<option><?= $bulan_ini ?></option>
-					</select>
-					<div class="btn-notif">
-						<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#64748b">
-							<path stroke-width="1.8"
-								d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-						</svg>
-						<div class="notif-dot"></div>
-					</div>
-				</div>
-			</div>
 
-			<!-- CONTENT -->
-			<div class="content">
+      <div class="sidebar-footer">
+        <div class="user-card">
+          <div class="avatar">SA</div>
+          <div>
+            <div class="user-name">Super Admin</div>
+            <div class="user-role">Dinas Kesehatan</div>
+          </div>
+        </div>
+        <a href="<?= base_url('auth/logout') ?>" class="nav-item text-danger mt-2"
+          style="background: rgba(239, 68, 68, 0.1);">
+          <svg class="icon text-danger" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          Keluar
+        </a>
+      </div>
+    </aside>
 
-				<!-- STAT CARDS -->
-				<div class="stats-grid">
-					<div class="stat-card blue">
-						<div class="stat-header">
-							<div class="stat-label">Total Balita</div>
-							<div class="stat-icon blue">
-								<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#3b82d4">
-									<path stroke-width="1.8"
-										d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-								</svg>
-							</div>
-						</div>
-						<div class="stat-value"><?= number_format($jml_balita, 0, ',', '.') ?></div>
-						<div class="stat-change text-muted">
-							<span>Total Balita Terdaftar</span>
-						</div>
-					</div>
+    <!-- MAIN CONTENT -->
+    <div class="main">
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <div>
+          <span class="topbar-title">Dashboard</span>
+          <span class="topbar-sub">— Ringkasan Stunting Kota Tomohon</span>
+        </div>
+        <div class="topbar-right">
+          <select class="period-select focus-ring" onchange="filterTanggal(this.value)" style="--bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25)">
+            <?php foreach ($bulan_list as $bl): ?>
+              <option value="<?= $bl['bulan'] ?>-<?= $bl['tahun'] ?>" <?= ((int)$bl['bulan'] == (int)$sel_m && (int)$bl['tahun'] == (int)$sel_y) ? 'selected' : '' ?>>
+                <?= $bl['label'] ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+          <div class="btn-notif">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#64748b">
+              <path stroke-width="1.8"
+                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+            <div class="notif-dot"></div>
+          </div>
+        </div>
+      </div>
 
-					<div class="stat-card green">
-						<div class="stat-header">
-							<div class="stat-label">Status Normal</div>
-							<div class="stat-icon green">
-								<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#10b981">
-									<path stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-								</svg>
-							</div>
-						</div>
-						<div class="stat-value"><?= number_format($count_normal, 0, ',', '.') ?></div>
-						<div class="stat-change up">
-							<svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-width="2" d="M5 15l7-7 7 7" />
-							</svg>
-							<?= $jml_balita > 0 ? round(($count_normal / $jml_balita) * 100, 1) : 0 ?>% <span>dari total</span>
-						</div>
-					</div>
+      <!-- CONTENT -->
+      <div class="content">
 
-					<div class="stat-card amber">
-						<div class="stat-header">
-							<div class="stat-label">Stunting</div>
-							<div class="stat-icon amber">
-								<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#f59e0b">
-									<path stroke-width="1.8"
-										d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-								</svg>
-							</div>
-						</div>
-						<div class="stat-value"><?= number_format($count_stunting, 0, ',', '.') ?></div>
-						<div class="stat-change down">
-							<svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-width="2" d="M19 9l-7 7-7-7" />
-							</svg>
-							<?= $jml_balita > 0 ? round(($count_stunting / $jml_balita) * 100, 1) : 0 ?>% <span>dari total</span>
-						</div>
-					</div>
+        <!-- STAT CARDS -->
+        <div class="stats-grid">
+          <div class="stat-card blue">
+            <div class="stat-header">
+              <div class="stat-label">Total Balita</div>
+              <div class="stat-icon blue">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#3b82d4">
+                  <path stroke-width="1.8"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="stat-value"><?= number_format($jml_balita, 0, ',', '.') ?></div>
+            <div class="stat-change text-muted">
+              <span>Total Balita Terdaftar</span>
+            </div>
+          </div>
 
-					<div class="stat-card red">
-						<div class="stat-header">
-							<div class="stat-label">Sangat Pendek</div>
-							<div class="stat-icon red">
-								<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ef4444">
-									<path stroke-width="1.8" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-								</svg>
-							</div>
-						</div>
-						<div class="stat-value"><?= number_format($count_sangat, 0, ',', '.') ?></div>
-						<div class="stat-change down">
-							<svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-width="2" d="M19 9l-7 7-7-7" />
-							</svg>
-							<?= $jml_balita > 0 ? round(($count_sangat / $jml_balita) * 100, 1) : 0 ?>% <span>dari total</span>
-						</div>
-					</div>
-				</div>
+          <div class="stat-card green">
+            <div class="stat-header">
+              <div class="stat-label">Status Normal</div>
+              <div class="stat-icon green">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#10b981">
+                  <path stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="stat-value"><?= number_format($count_normal, 0, ',', '.') ?></div>
+            <div class="stat-change up">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-width="2" d="M5 15l7-7 7 7" />
+              </svg>
+              <?= $jml_balita > 0 ? round(($count_normal / $jml_balita) * 100, 1) : 0 ?>% <span>dari total</span>
+            </div>
+          </div>
 
-				<!-- CHART + DONUT -->
-				<div class="grid-3-1">
-					<div class="card-custom">
-						<div class="card-custom-header">
-							<div>
-								<h5 class="card-custom-title">Tren Stunting — 6 Bulan Terakhir</h5>
-								<div class="card-custom-sub">Semua puskesmas · Kota Tomohon</div>
-							</div>
-							<a href="#" class="card-custom-action">Lihat detail</a>
-						</div>
-						<div class="card-custom-body">
-							<div style="height: 200px; width: 100%;">
-								<canvas id="trendChart"></canvas>
-							</div>
-						</div>
+          <div class="stat-card amber">
+            <div class="stat-header">
+              <div class="stat-label">Stunting</div>
+              <div class="stat-icon amber">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#f59e0b">
+                  <path stroke-width="1.8"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+            </div>
+            <div class="stat-value"><?= number_format($count_stunting, 0, ',', '.') ?></div>
+            <div class="stat-change down">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+              <?= $jml_balita > 0 ? round(($count_stunting / $jml_balita) * 100, 1) : 0 ?>% <span>dari total</span>
+            </div>
+          </div>
 
-					</div>
+          <div class="stat-card red">
+            <div class="stat-header">
+              <div class="stat-label">Sangat Pendek</div>
+              <div class="stat-icon red">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#ef4444">
+                  <path stroke-width="1.8" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="stat-value"><?= number_format($count_sangat, 0, ',', '.') ?></div>
+            <div class="stat-change down">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+              <?= $jml_balita > 0 ? round(($count_sangat / $jml_balita) * 100, 1) : 0 ?>% <span>dari total</span>
+            </div>
+          </div>
+        </div>
 
-					<div class="card-custom">
-						<div class="card-custom-header">
-							<div>
-								<h5 class="card-custom-title">Distribusi Status</h5>
-								<div class="card-custom-sub">Bulan ini</div>
-							</div>
-						</div>
-						<div class="card-custom-body">
-							<div class="donut-wrap">
-								<?php
-								$total_stat = $count_normal + $count_stunting + $count_sangat;
-								$p_norm = $total_stat > 0 ? round(($count_normal / $total_stat) * 100) : 0;
-								$p_stunt = $total_stat > 0 ? round(($count_stunting / $total_stat) * 100) : 0;
-								$p_sangat = $total_stat > 0 ? round(($count_sangat / $total_stat) * 100) : 0;
+        <!-- CHART + DONUT -->
+        <div class="grid-3-1">
+          <div class="card-custom">
+            <div class="card-custom-header">
+              <div>
+                <h5 class="card-custom-title">Tren Stunting — 6 Bulan Terakhir</h5>
+                <div class="card-custom-sub">Semua puskesmas · Kota Tomohon</div>
+              </div>
+              <a href="#" class="card-custom-action">Lihat detail</a>
+            </div>
+            <div class="card-custom-body">
+              <div style="height: 200px; width: 100%;">
+                <canvas id="trendChart"></canvas>
+              </div>
+            </div>
 
-								// Conic gradient segments
-								$s1 = $p_norm;
-								$s2 = $p_norm + $p_stunt;
-								?>
-								<div class="donut"
-									style="background: conic-gradient(var(--success) 0% <?= $s1 ?>%, var(--warning) <?= $s1 ?>% <?= $s2 ?>%, var(--danger) <?= $s2 ?>% 100%);">
-									<div class="donut-center">
-										<div class="donut-pct"><?= $p_norm ?>%</div>
-										<div class="donut-lbl">Normal</div>
-									</div>
-								</div>
-								<div class="donut-legend">
-									<div class="donut-row">
-										<div class="legend-dot" style="background:var(--success);width:8px;height:8px;border-radius:50%">
-										</div>
-										<div class="donut-label">Normal</div>
-										<div class="donut-val"><?= $count_normal ?></div>
-									</div>
-									<div class="donut-row">
-										<div class="legend-dot" style="background:var(--warning);width:8px;height:8px;border-radius:50%">
-										</div>
-										<div class="donut-label">Stunting</div>
-										<div class="donut-val"><?= $count_stunting ?></div>
-									</div>
-									<div class="donut-row">
-										<div class="legend-dot" style="background:var(--danger);width:8px;height:8px;border-radius:50%">
-										</div>
-										<div class="donut-label">Sangat Pendek</div>
-										<div class="donut-val"><?= $count_sangat ?></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+          </div>
 
-				<!-- TABLE + ALERTS -->
-				<div class="grid-2">
-					<div class="card-custom">
-						<div class="card-custom-header">
-							<div>
-								<h5 class="card-custom-title">Rekapitulasi per Puskesmas</h5>
-								<div class="card-custom-sub">Maret 2026</div>
-							</div>
-							<a href="#" class="card-custom-action">Lihat semua</a>
-						</div>
-						<div class="table-responsive">
-							<table class="pk-table table table-borderless table-hover mb-0">
-								<thead>
-									<tr>
-										<th>Puskesmas</th>
-										<th>Total</th>
-										<th>Stunting</th>
-										<th>Prevalensi</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php foreach ($rekap_puskesmas as $rp):
-										$total_stunted = $rp['stunting'] + $rp['sangat_pendek'];
-										$prev = $rp['total_balita'] > 0 ? round(($total_stunted / $rp['total_balita']) * 100, 1) : 0;
-										$color = $prev >= 20 ? 'var(--danger)' : ($prev > 0 ? 'var(--warning)' : 'var(--success)');
-										$badge = $prev >= 20 ? 'severe' : ($prev > 0 ? 'stunting' : 'normal');
-									?>
-										<tr>
-											<td>
-												<div class="pk-name"><?= $rp['nama_puskesmas'] ?></div>
-											</td>
-											<td><?= $rp['total_balita'] ?></td>
-											<td><span class="status-badge <?= $badge ?>"><?= $total_stunted ?> kasus</span></td>
-											<td>
-												<div class="d-flex align-items-center gap-2">
-													<div class="prog-wrap">
-														<div class="prog-fill" style="background:<?= $color ?>;width:<?= min(100, $prev) ?>%"></div>
-													</div>
-													<span style="font-size:11px;font-weight:600;color:<?= $color ?>"><?= $prev ?>%</span>
-												</div>
-											</td>
-										</tr>
-									<?php endforeach; ?>
-								</tbody>
-							</table>
-						</div>
-					</div>
+          <div class="card-custom">
+            <div class="card-custom-header">
+              <div>
+                <h5 class="card-custom-title">Distribusi Status</h5>
+                <div class="card-custom-sub">Bulan ini</div>
+              </div>
+            </div>
+            <div class="card-custom-body">
+              <div class="donut-wrap">
+                <?php
+                $total_stat = $count_normal + $count_stunting + $count_sangat;
+                $p_norm = $total_stat > 0 ? round(($count_normal / $total_stat) * 100) : 0;
+                $p_stunt = $total_stat > 0 ? round(($count_stunting / $total_stat) * 100) : 0;
+                $p_sangat = $total_stat > 0 ? round(($count_sangat / $total_stat) * 100) : 0;
 
-					<div class="card-custom">
-						<div class="card-custom-header">
-							<div>
-								<h5 class="card-custom-title">Notifikasi Terbaru</h5>
-								<div class="card-custom-sub">Aktivitas sistem</div>
-							</div>
-							<a href="#" class="card-custom-action">Aktivitas Terbaru Puskesmas</a>
-						</div>
-						<div class="card-custom-body">
-							<div class="alert-list">
-								<?php foreach ($notifikasi as $n):
-									$stat = strtolower($n['status_stunting']);
-									$color = (strpos($stat, 'sangat') !== false) ? 'var(--danger)' : ((strpos($stat, 'stunting') !== false) ? 'var(--warning)' : 'var(--blue-500)');
-								?>
-									<div class="alert-item-custom">
-										<div class="alert-dot" style="background:<?= $color ?>"></div>
-										<div>
-											<p class="alert-text"><span class="alert-bold"><?= $n['nama_lengkap'] ?></span>
-												(<?= $n['nama_puskesmas'] ?>) diukur dengan status <span
-													class="alert-bold"><?= $n['status_stunting'] ?></span></p>
-											<div class="alert-time"><?= date('d M Y', strtotime($n['tgl_pengukuran'])) ?></div>
-										</div>
-									</div>
-								<?php endforeach; ?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                // Conic gradient segments
+                $s1 = $p_norm;
+                $s2 = $p_norm + $p_stunt;
+                ?>
+                <div class="donut"
+                  style="background: conic-gradient(var(--success) 0% <?= $s1 ?>%, var(--warning) <?= $s1 ?>% <?= $s2 ?>%, var(--danger) <?= $s2 ?>% 100%);">
+                  <div class="donut-center">
+                    <div class="donut-pct"><?= $p_norm ?>%</div>
+                    <div class="donut-lbl">Normal</div>
+                  </div>
+                </div>
+                <div class="donut-legend">
+                  <div class="donut-row">
+                    <div class="legend-dot" style="background:var(--success);width:8px;height:8px;border-radius:50%">
+                    </div>
+                    <div class="donut-label">Normal</div>
+                    <div class="donut-val"><?= $count_normal ?></div>
+                  </div>
+                  <div class="donut-row">
+                    <div class="legend-dot" style="background:var(--warning);width:8px;height:8px;border-radius:50%">
+                    </div>
+                    <div class="donut-label">Stunting</div>
+                    <div class="donut-val"><?= $count_stunting ?></div>
+                  </div>
+                  <div class="donut-row">
+                    <div class="legend-dot" style="background:var(--danger);width:8px;height:8px;border-radius:50%">
+                    </div>
+                    <div class="donut-label">Sangat Pendek</div>
+                    <div class="donut-val"><?= $count_sangat ?></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-			<!-- FOOTER -->
-			<footer class="footer">
-				Copyright © 2026 <span>Teknik Elektro</span> - Politeknik Negeri Manado
-			</footer>
+        <!-- TABLE + ALERTS -->
+        <div class="grid-2">
+          <div class="card-custom">
+            <div class="card-custom-header">
+              <div>
+                <h5 class="card-custom-title">Rekapitulasi per Puskesmas</h5>
+                <div class="card-custom-sub">Maret 2026</div>
+              </div>
+              <a href="#" class="card-custom-action">Lihat semua</a>
+            </div>
+            <div class="table-responsive">
+              <table class="pk-table table table-borderless table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th>Puskesmas</th>
+                    <th>Total</th>
+                    <th>Stunting</th>
+                    <th>Prevalensi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($rekap_puskesmas as $rp):
+                    $total_stunted = $rp['stunting'] + $rp['sangat_pendek'];
+                    $prev = $rp['total_balita'] > 0 ? round(($total_stunted / $rp['total_balita']) * 100, 1) : 0;
+                    $color = $prev >= 20 ? 'var(--danger)' : ($prev > 0 ? 'var(--warning)' : 'var(--success)');
+                    $badge = $prev >= 20 ? 'severe' : ($prev > 0 ? 'stunting' : 'normal');
+                    ?>
+                    <tr>
+                      <td>
+                        <div class="pk-name"><?= $rp['nama_puskesmas'] ?></div>
+                      </td>
+                      <td><?= $rp['total_balita'] ?></td>
+                      <td><span class="status-badge <?= $badge ?>"><?= $total_stunted ?> kasus</span></td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="prog-wrap">
+                            <div class="prog-fill" style="background:<?= $color ?>;width:<?= min(100, $prev) ?>%"></div>
+                          </div>
+                          <span style="font-size:11px;font-weight:600;color:<?= $color ?>"><?= $prev ?>%</span>
+                        </div>
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-		</div>
-	</div>
-	</div>
-	</div>
-	</div>
+          <div class="card-custom">
+            <div class="card-custom-header">
+              <div>
+                <h5 class="card-custom-title">Notifikasi Terbaru</h5>
+                <div class="card-custom-sub">Aktivitas sistem</div>
+              </div>
+              <a href="#" class="card-custom-action">Aktivitas Terbaru Puskesmas</a>
+            </div>
+            <div class="card-custom-body">
+              <div class="alert-list">
+                <?php foreach ($notifikasi as $n):
+                  $stat = strtolower($n['status_stunting']);
+                  $color = (strpos($stat, 'sangat') !== false) ? 'var(--danger)' : ((strpos($stat, 'stunting') !== false) ? 'var(--warning)' : 'var(--blue-500)');
+                  ?>
+                  <div class="alert-item-custom">
+                    <div class="alert-dot" style="background:<?= $color ?>"></div>
+                    <div>
+                      <p class="alert-text"><span class="alert-bold"><?= $n['nama_lengkap'] ?></span>
+                        (<?= $n['nama_puskesmas'] ?>) diukur dengan status <span
+                          class="alert-bold"><?= $n['status_stunting'] ?></span></p>
+                      <div class="alert-time"><?= date('d M Y', strtotime($n['tgl_pengukuran'])) ?></div>
+                    </div>
+                  </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
 
-	<script>
-		// Trend Chart Initialization
-		const ctx = document.getElementById('trendChart').getContext('2d');
-		new Chart(ctx, {
-			type: 'line',
-			data: {
-				labels: <?= json_encode($label_6_bulan) ?>,
-				datasets: [{
-						label: 'Normal',
-						data: <?= json_encode(array_column($tren_6_bulan, 'norm_raw')) ?>,
-						borderColor: '#3b82d4',
-						backgroundColor: 'rgba(59, 130, 212, 0.1)',
-						fill: true,
-						tension: 0.4,
-						pointRadius: 4,
-						pointBackgroundColor: '#3b82d4'
-					},
-					{
-						label: 'Stunting',
-						data: <?= json_encode(array_column($tren_6_bulan, 'stunt_raw')) ?>,
-						borderColor: '#f59e0b',
-						backgroundColor: 'transparent',
-						tension: 0.4,
-						pointRadius: 4,
-						pointBackgroundColor: '#f59e0b'
-					},
-					{
-						label: 'Sangat Pendek',
-						data: <?= json_encode(array_column($tren_6_bulan, 'sangat_raw')) ?>,
-						borderColor: '#ef4444',
-						backgroundColor: 'transparent',
-						tension: 0.4,
-						pointRadius: 4,
-						pointBackgroundColor: '#ef4444'
-					}
-				]
-			},
-			options: {
-				responsive: true,
-				maintainAspectRatio: false,
-				plugins: {
-					legend: {
-						display: true,
-						position: 'bottom',
-						labels: {
-							usePointStyle: true,
-							padding: 20,
-							font: {
-								family: 'DM Sans',
-								size: 11
-							}
-						}
-					},
-					tooltip: {
-						mode: 'index',
-						intersect: false,
-						padding: 10,
-						backgroundColor: 'rgba(0,0,0,0.8)',
-						titleFont: {
-							size: 12,
-							weight: 'bold'
-						},
-						bodyFont: {
-							size: 12
-						}
-					}
-				},
-				scales: {
-					y: {
-						beginAtZero: true,
-						grid: {
-							display: true,
-							color: '#f1f5f9'
-						},
-						ticks: {
-							font: {
-								size: 10
-							}
-						}
-					},
-					x: {
-						grid: {
-							display: false
-						},
-						ticks: {
-							font: {
-								size: 10
-							}
-						}
-					}
-				}
-			}
-		});
-	</script>
+      <!-- FOOTER -->
+      <footer class="footer">
+        Copyright © 2026 <span>Teknik Elektro</span> - Politeknik Negeri Manado
+      </footer>
 
-	<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
 
-	<style>
-		@media (max-width: 768px) {
-			#menuToggle {
-				display: block !important;
-			}
-		}
-	</style>
+  <script>
+    function filterTanggal(val) {
+      if (!val) return;
+      const parts = val.split('-');
+      if (parts.length === 2) {
+        const baseUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        window.location.href = baseUrl + '?bulan=' + parts[0] + '&tahun=' + parts[1];
+      }
+    }
 
-	<script>
-		function toggleSidebar() {
-			const sidebar = document.querySelector('.sidebar');
-			const overlay = document.getElementById('sidebarOverlay');
-			sidebar.classList.toggle('open');
-			overlay.classList.toggle('show');
-		}
-	</script>
-
-	
+    // Trend Chart Initialization
+    const ctx = document.getElementById('trendChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: <?= json_encode($label_6_bulan) ?>,
+        datasets: [
+          {
+            label: 'Normal',
+            data: <?= json_encode(array_column($tren_6_bulan, 'norm_raw')) ?>,
+            borderColor: '#3b82d4',
+            backgroundColor: 'rgba(59, 130, 212, 0.1)',
+            fill: true,
+            tension: 0.4,
+            pointRadius: 4,
+            pointBackgroundColor: '#3b82d4'
+          },
+          {
+            label: 'Stunting',
+            data: <?= json_encode(array_column($tren_6_bulan, 'stunt_raw')) ?>,
+            borderColor: '#f59e0b',
+            backgroundColor: 'transparent',
+            tension: 0.4,
+            pointRadius: 4,
+            pointBackgroundColor: '#f59e0b'
+          },
+          {
+            label: 'Sangat Pendek',
+            data: <?= json_encode(array_column($tren_6_bulan, 'sangat_raw')) ?>,
+            borderColor: '#ef4444',
+            backgroundColor: 'transparent',
+            tension: 0.4,
+            pointRadius: 4,
+            pointBackgroundColor: '#ef4444'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom',
+            labels: {
+              usePointStyle: true,
+              padding: 20,
+              font: {
+                family: 'DM Sans',
+                size: 11
+              }
+            }
+          },
+          tooltip: {
+            mode: 'index',
+            intersect: false,
+            padding: 10,
+            backgroundColor: 'rgba(0,0,0,0.8)',
+            titleFont: { size: 12, weight: 'bold' },
+            bodyFont: { size: 12 }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: {
+              display: true,
+              color: '#f1f5f9'
+            },
+            ticks: {
+              font: { size: 10 }
+            }
+          },
+          x: {
+            grid: {
+              display: false
+            },
+            ticks: {
+              font: { size: 10 }
+            }
+          }
+        }
+      }
+    });
+  </script>
+<script src="<?= base_url('assets/js/responsive.js?v=1.4') ?>"></script>
 </body>
 
 </html>

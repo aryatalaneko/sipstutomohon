@@ -17,11 +17,15 @@ class Welcome extends CI_Controller {
         }
 		$this->load->helper('url');
 
+        $current_month = $this->input->get('bulan') ?: date('m');
+        $current_year = $this->input->get('tahun') ?: date('Y');
+        $current_month = str_pad($current_month, 2, '0', STR_PAD_LEFT);
+        
+        $data['sel_m'] = $current_month;
+        $data['sel_y'] = $current_year;
+
         $data['jml_balita'] = $this->db->count_all_results('balita');
         $data['jml_puskesmas'] = $this->db->count_all_results('puskesmas');
-        
-        $current_month = date('m');
-        $current_year = date('Y');
         
         $this->db->select('COUNT(DISTINCT balita_id) as measured');
         $this->db->from('pengukuran_balita');
@@ -61,6 +65,34 @@ class Welcome extends CI_Controller {
         $bulan_arr = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
         $data['bulan_ini'] = $bulan_arr[(int)$current_month - 1] . ' ' . $current_year;
 
+        // Generate list of months for dropdown filter
+        $bulan_list = [];
+        for ($i = 0; $i < 24; $i++) {
+            $time = strtotime("-$i months");
+            $m_val = date('m', $time);
+            $y_val = date('Y', $time);
+            $bulan_list[] = [
+                'bulan' => $m_val,
+                'tahun' => $y_val,
+                'label' => $bulan_arr[(int)$m_val - 1] . ' ' . $y_val
+            ];
+        }
+        $found = false;
+        foreach ($bulan_list as $b) {
+            if ((int)$b['bulan'] == (int)$current_month && (int)$b['tahun'] == (int)$current_year) {
+                $found = true;
+                break;
+            }
+        }
+        if (!$found) {
+            array_unshift($bulan_list, [
+                'bulan' => $current_month,
+                'tahun' => $current_year,
+                'label' => $bulan_arr[(int)$current_month - 1] . ' ' . $current_year
+            ]);
+        }
+        $data['bulan_list'] = $bulan_list;
+
         // Rekap per Puskesmas
         $latest_msq = "(SELECT MAX(id) FROM pengukuran_balita pb2 WHERE pb2.balita_id = balita.id AND MONTH(pb2.tgl_pengukuran) = '$current_month' AND YEAR(pb2.tgl_pengukuran) = '$current_year')";
         $this->db->select('puskesmas.nama_puskesmas,
@@ -76,10 +108,13 @@ class Welcome extends CI_Controller {
         $data['rekap_puskesmas'] = $this->db->get()->result_array();
 
         // 6 months trend
-        $six_months_ago = date('Y-m-01', strtotime("-5 months"));
+        $selected_date_str = "$current_year-$current_month-01";
+        $six_months_ago = date('Y-m-01', strtotime("-5 months", strtotime($selected_date_str)));
+        $selected_end_date = date('Y-m-t', strtotime($selected_date_str));
         $this->db->select('status_stunting, tgl_pengukuran, balita_id');
         $this->db->from('pengukuran_balita');
         $this->db->where("tgl_pengukuran >=", $six_months_ago);
+        $this->db->where("tgl_pengukuran <=", $selected_end_date);
         $this->db->order_by('tgl_pengukuran', 'DESC');
         $this->db->order_by('id', 'DESC');
         $all_measurements = $this->db->get()->result_array();
@@ -87,8 +122,8 @@ class Welcome extends CI_Controller {
         $tren_6_bulan = [];
         $labels = [];
         for ($i = 5; $i >= 0; $i--) {
-            $m = date('n', strtotime("-$i months"));
-            $y = date('Y', strtotime("-$i months"));
+            $m = date('n', strtotime("-$i months", strtotime($selected_date_str)));
+            $y = date('Y', strtotime("-$i months", strtotime($selected_date_str)));
             $month_labels = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agt', 'Sep', 'Okt', 'Nov', 'Des'];
             $labels[] = $month_labels[$m - 1];
             
@@ -130,11 +165,17 @@ class Welcome extends CI_Controller {
 	{
 		if ($this->session->userdata('role') != 'admin_puskesmas' && $this->session->userdata('role') != 'superadmin') { redirect('auth'); }
         $pid = $this->session->userdata('puskesmas_id') ?: 0;
+        $current_month = $this->input->get('bulan') ?: date('m');
+        $current_year = $this->input->get('tahun') ?: date('Y');
+        $current_month = str_pad($current_month, 2, '0', STR_PAD_LEFT);
+        
+        $data['sel_m'] = $current_month;
+        $data['sel_y'] = $current_year;
+
         $data['jml_balita'] = $this->db->where('puskesmas_id', $pid)->count_all_results('balita');
         $this->db->select('COUNT(DISTINCT id_kelurahan) as k'); $this->db->where('puskesmas_id', $pid);
         $rk = $this->db->get('balita')->row(); $data['jml_kelurahan'] = $rk ? $rk->k : 0;
         
-        $current_month = date('m'); $current_year = date('Y');
         $this->db->select('COUNT(DISTINCT balita_id) as measured'); $this->db->from('pengukuran_balita');
         $this->db->join('balita', 'balita.id = pengukuran_balita.balita_id');
         $this->db->where('balita.puskesmas_id', $pid); $this->db->where('MONTH(tgl_pengukuran)', $current_month); $this->db->where('YEAR(tgl_pengukuran)', $current_year);
@@ -160,6 +201,34 @@ class Welcome extends CI_Controller {
         $bulan_arr = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
         $data['bulan_ini'] = $bulan_arr[(int)$current_month - 1] . ' ' . $current_year;
 
+        // Generate list of months for dropdown filter
+        $bulan_list = [];
+        for ($i = 0; $i < 24; $i++) {
+            $time = strtotime("-$i months");
+            $m_val = date('m', $time);
+            $y_val = date('Y', $time);
+            $bulan_list[] = [
+                'bulan' => $m_val,
+                'tahun' => $y_val,
+                'label' => $bulan_arr[(int)$m_val - 1] . ' ' . $y_val
+            ];
+        }
+        $found = false;
+        foreach ($bulan_list as $b) {
+            if ((int)$b['bulan'] == (int)$current_month && (int)$b['tahun'] == (int)$current_year) {
+                $found = true;
+                break;
+            }
+        }
+        if (!$found) {
+            array_unshift($bulan_list, [
+                'bulan' => $current_month,
+                'tahun' => $current_year,
+                'label' => $bulan_arr[(int)$current_month - 1] . ' ' . $current_year
+            ]);
+        }
+        $data['bulan_list'] = $bulan_list;
+
         $this->db->select('pengukuran_balita.*, balita.nama_lengkap, balita.jenis_kelamin, balita.tgl_lahir, kelurahan.nama_kelurahan');
         $this->db->from('pengukuran_balita'); $this->db->join('balita', 'balita.id = pengukuran_balita.balita_id');
         $this->db->join('kelurahan', 'kelurahan.id = balita.id_kelurahan', 'left');
@@ -167,12 +236,15 @@ class Welcome extends CI_Controller {
         $data['pengukuran_terbaru'] = $this->db->get()->result_array();
 
         // 6 months trend for specific puskesmas
-        $six_months_ago = date('Y-m-01', strtotime("-5 months"));
+        $selected_date_str = "$current_year-$current_month-01";
+        $six_months_ago = date('Y-m-01', strtotime("-5 months", strtotime($selected_date_str)));
+        $selected_end_date = date('Y-m-t', strtotime($selected_date_str));
         $this->db->select('pb.status_stunting, pb.tgl_pengukuran, pb.balita_id');
         $this->db->from('pengukuran_balita pb');
         $this->db->join('balita b', 'b.id = pb.balita_id');
         $this->db->where('b.puskesmas_id', $pid);
         $this->db->where("pb.tgl_pengukuran >=", $six_months_ago);
+        $this->db->where("pb.tgl_pengukuran <=", $selected_end_date);
         $this->db->order_by('pb.tgl_pengukuran', 'DESC');
         $this->db->order_by('pb.id', 'DESC');
         $all_measurements = $this->db->get()->result_array();
@@ -182,8 +254,8 @@ class Welcome extends CI_Controller {
         $month_labels = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agt', 'Sep', 'Okt', 'Nov', 'Des'];
         
         for ($i = 5; $i >= 0; $i--) {
-            $m = (int)date('m', strtotime("-$i months"));
-            $y = (int)date('Y', strtotime("-$i months"));
+            $m = (int)date('m', strtotime("-$i months", strtotime($selected_date_str)));
+            $y = (int)date('Y', strtotime("-$i months", strtotime($selected_date_str)));
             $labels[] = $month_labels[$m - 1];
             
             $norm = 0; $stunt = 0; $sangat = 0;

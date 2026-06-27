@@ -700,6 +700,7 @@
     </div>
   </div>
 
+<script src="<?= base_url('assets/js/responsive.js?v=1.4') ?>"></script>
 </body>
 
 </html>
