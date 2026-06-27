@@ -222,7 +222,7 @@
       </div>
     </div>
 
-    <div class="content">
+    <div class="content map-content-layout">
       <!-- MAP -->
       <div id="map"></div>
 
@@ -450,5 +450,15 @@
     document.querySelectorAll('.pk-card').forEach(c => c.classList.remove('active'));
   }
 </script>
+<script src="<?= base_url('assets/js/responsive.js?v=1.4') ?>"></script>
+<script>
+  // Pastikan peta Leaflet merender tile setelah CSS responsif dimuat
+  setTimeout(function() {
+    if (typeof map !== 'undefined') {
+      map.invalidateSize();
+    }
+  }, 600);
+</script>
 </body>
 </html>
+

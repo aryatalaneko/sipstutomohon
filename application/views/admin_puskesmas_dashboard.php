@@ -1360,6 +1360,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+<script src="<?= base_url('assets/js/responsive.js?v=1.4') ?>"></script>
 </body>
 
 </html>

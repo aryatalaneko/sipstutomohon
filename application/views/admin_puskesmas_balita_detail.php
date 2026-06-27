@@ -391,5 +391,6 @@ function hitungModalZ() {
   document.getElementById('m-status-badge').style.color = color;
 }
 </script>
+<script src="<?= base_url('assets/js/responsive.js?v=1.4') ?>"></script>
 </body>
 </html>
