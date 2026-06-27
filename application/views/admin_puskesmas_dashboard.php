@@ -45,15 +45,15 @@
       font-family: 'DM Sans', sans-serif;
       background: var(--surface);
       color: var(--text-primary);
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      
     }
 
     .layout {
       display: flex;
       height: 100vh;
-      width: 100vw;
-      overflow: hidden;
+      min-height: 100vh;
+      
     }
 
     /* SIDEBAR */
