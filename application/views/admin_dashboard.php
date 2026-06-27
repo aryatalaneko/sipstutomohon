@@ -928,8 +928,12 @@
           <span class="topbar-sub">— Ringkasan Stunting Kota Tomohon</span>
         </div>
         <div class="topbar-right">
-          <select class="period-select focus-ring" style="--bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25)">
-            <option><?= $bulan_ini ?></option>
+          <select class="period-select focus-ring" onchange="filterTanggal(this.value)" style="--bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25)">
+            <?php foreach ($bulan_list as $bl): ?>
+              <option value="<?= $bl['bulan'] ?>-<?= $bl['tahun'] ?>" <?= ((int)$bl['bulan'] == (int)$sel_m && (int)$bl['tahun'] == (int)$sel_y) ? 'selected' : '' ?>>
+                <?= $bl['label'] ?>
+              </option>
+            <?php endforeach; ?>
           </select>
           <div class="btn-notif">
             <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#64748b">
@@ -1177,6 +1181,15 @@
   </div>
 
   <script>
+    function filterTanggal(val) {
+      if (!val) return;
+      const parts = val.split('-');
+      if (parts.length === 2) {
+        const baseUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        window.location.href = baseUrl + '?bulan=' + parts[0] + '&tahun=' + parts[1];
+      }
+    }
+
     // Trend Chart Initialization
     const ctx = document.getElementById('trendChart').getContext('2d');
     new Chart(ctx, {

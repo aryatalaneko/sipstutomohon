@@ -999,11 +999,13 @@
             <?= htmlspecialchars($this->session->userdata('nama_puskesmas') ?: 'Puskesmas') ?></span>
         </div>
         <div class="topbar-right">
-          <!-- <select class="period-select focus-ring" style="--bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25)">
-            <option>Maret 2026</option>
-            <option>Februari 2026</option>
-            <option>Januari 2026</option>
-          </select> -->
+          <select class="period-select focus-ring" onchange="filterTanggal(this.value)" style="--bs-focus-ring-color: rgba(var(--bs-primary-rgb), .25); margin-right: 10px;">
+            <?php foreach ($bulan_list as $bl): ?>
+              <option value="<?= $bl['bulan'] ?>-<?= $bl['tahun'] ?>" <?= ((int)$bl['bulan'] == (int)$sel_m && (int)$bl['tahun'] == (int)$sel_y) ? 'selected' : '' ?>>
+                <?= $bl['label'] ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
           <button class="btn-primary" onclick="window.location.href='<?= base_url('balita_admin/tambah') ?>'">
             <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-width="2.5" d="M12 4v16m8-8H4" />
@@ -1341,6 +1343,17 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function filterTanggal(val) {
+      if (!val) return;
+      const parts = val.split('-');
+      if (parts.length === 2) {
+        const baseUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        window.location.href = baseUrl + '?bulan=' + parts[0] + '&tahun=' + parts[1];
+      }
+    }
+  </script>
 
   <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
