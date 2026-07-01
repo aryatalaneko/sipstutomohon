@@ -171,16 +171,23 @@
 
   <!-- MAIN -->
   <div class="main">
-    <div class="topbar">
-      <div>
-        <span class="topbar-title">Grafik Stunting per Puskesmas</span>
-        <span class="topbar-sub">— Seluruh Kota Tomohon</span>
-      </div>
-      <div style="font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        Per <?= htmlspecialchars($bulan_ini) ?>
-      </div>
-    </div>
+  <div class="topbar">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <span class="topbar-title">Grafik Stunting per Puskesmas</span>
+    <span class="topbar-sub">— 6 Bulan Terakhir</span>
+  </div>
+  <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#94a3b8" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+    <select onchange="filterGrafik(this.value)" style="border: 1px solid var(--border); background: var(--surface); border-radius: 8px; padding: 6px 12px; font-size: 12px; color: var(--text-secondary); cursor: pointer; font-family: 'DM Sans', sans-serif; outline: none;">
+      <?php foreach ($bulan_list as $bl): ?>
+        <option value="<?= $bl['bulan'] ?>-<?= $bl['tahun'] ?>"
+          <?= ((int)$bl['bulan'] == (int)$sel_m && (int)$bl['tahun'] == (int)$sel_y) ? 'selected' : '' ?>>
+          <?= $bl['label'] ?>
+        </option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+</div>
 
     <div class="content">
 
@@ -357,5 +364,15 @@
   });
 </script>
 <script src="<?= base_url('assets/js/responsive.js?v=1.4') ?>"></script>
+<script>
+  function filterGrafik(val) {
+    if (!val) return;
+    const parts = val.split('-');
+    if (parts.length === 2) {
+      const baseUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+      window.location.href = baseUrl + '?bulan=' + parts[0] + '&tahun=' + parts[1];
+    }
+  }
+</script>
 </body>
 </html>

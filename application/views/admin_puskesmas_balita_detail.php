@@ -49,7 +49,7 @@
     .content { flex: 1; padding: 24px 28px; overflow-y: auto; }
     
     /* TOPBAR & HEADER */
-    .topbar { background: white; border-bottom: 1px solid var(--border); padding: 0 28px; height: 60px; display: flex; align-items: center; gap:12px; flex-shrink:0; }
+    .topbar { background: white; border-bottom: 1px solid var(--border); padding: 0 28px; height: 60px; display: flex; justify-content: flex-start;  align-items: center; gap:12px; flex-shrink:0; }
     .topbar-back { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-secondary); transition: all 0.2s; text-decoration: none; }
     .topbar-back:hover { background: var(--surface); color: var(--text-primary); border-color: var(--text-muted); }
     .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; margin-bottom: 0; }

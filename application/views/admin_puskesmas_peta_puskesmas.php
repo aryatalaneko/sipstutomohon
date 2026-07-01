@@ -44,7 +44,7 @@
 
     /* MAIN */
     .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
-    .topbar { background: white; border-bottom: 1px solid var(--border); padding: 0 28px; height: 60px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+    .topbar { background: white; border-bottom: 1px solid var(--border); padding: 0 28px; height: 60px; display: flex; align-items: center;  gap: 16px; justify-content: flex-start; flex-shrink: 0; }
     .topbar-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; }
     .topbar-sub { font-size: 12px; color: var(--text-muted); margin-left: 4px; }
     .content { flex: 1; display: flex; overflow: hidden; }
@@ -212,14 +212,31 @@
     <div class="topbar">
       <div>
         <span class="topbar-title">Peta Puskesmas</span>
-        <span class="topbar-sub">— Sebaran Stunting Kawasan Puskesmas <?= htmlspecialchars($bulan_ini) ?></span>
+        <span class="topbar-sub">— Sebaran Stunting Kawasan Puskesmas </span>
       </div>
       <div style="display: flex; align-items: center; gap: 10px;">
-        <button onclick="resetMapView()" style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 7px 14px; font-size: 12px; color: var(--text-secondary); cursor: pointer; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; gap: 5px; transition: all 0.15s;" onmouseover="this.style.borderColor='var(--blue-400)'" onmouseout="this.style.borderColor='var(--border)'">
-          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-          Reset Peta
-        </button>
-      </div>
+  <!-- FILTER BULAN -->
+  <form method="GET" action="<?= base_url('welcome/peta_puskesmas') ?>" style="display:flex; align-items:center; gap:8px;">
+    <select name="bulan" onchange="this.form.submit()"
+      style="border: 1px solid var(--border); border-radius: 8px; padding: 7px 12px; font-size: 12px; color: var(--text-secondary); background: var(--surface); cursor: pointer; font-family: 'DM Sans', sans-serif; outline: none;">
+      <?php foreach($bulan_list as $bl): ?>
+        <option value="<?= $bl['bulan'] ?>" data-tahun="<?= $bl['tahun'] ?>"
+          <?= ((int)$bl['bulan'] == (int)$sel_m && (int)$bl['tahun'] == (int)$sel_y) ? 'selected' : '' ?>>
+          <?= $bl['label'] ?>
+        </option>
+      <?php endforeach; ?>
+    </select>
+    <input type="hidden" name="tahun" id="tahun-input" value="<?= $sel_y ?>">
+  </form>
+
+  <button onclick="resetMapView()"
+    style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 7px 14px; font-size: 12px; color: var(--text-secondary); cursor: pointer; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; gap: 5px; transition: all 0.15s;"
+    onmouseover="this.style.borderColor='var(--blue-400)'"
+    onmouseout="this.style.borderColor='var(--border)'">
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+    Reset Peta
+  </button>
+</div>
     </div>
 
     <div class="content map-content-layout">
@@ -323,18 +340,24 @@
     attribution: '&copy; OpenStreetMap'
   });
 
-  const standardLight = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    maxZoom: 20,
-    attribution: '&copy; OpenStreetMap &copy; CARTO'
-  });
+  const outdoors = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  maxZoom: 19,
+  attribution: '&copy; Esri'
+}); 
 
+
+ const standardLight = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+    maxZoom: 20,
+    attribution: '&copy; Google Maps'
+});
   // Set default layer
   osmStandard.addTo(map);
 
   // Add Layer Control
   const baseLayers = {
     "Peta Standar": osmStandard,
-    "Street View": standardLight
+    "Outdoors": outdoors,
+		"Street View (Light)": standardLight
   };
   L.control.layers(baseLayers, null, { position: 'topright' }).addTo(map);
 
@@ -458,6 +481,13 @@
       map.invalidateSize();
     }
   }, 600);
+</script>
+<script>
+  document.querySelector('select[name="bulan"]').addEventListener('change', function() {
+    const selected = this.options[this.selectedIndex];
+    document.getElementById('tahun-input').value = selected.getAttribute('data-tahun');
+    this.form.submit();
+  });
 </script>
 </body>
 </html>
