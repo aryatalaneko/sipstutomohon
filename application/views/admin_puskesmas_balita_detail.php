@@ -1,48 +1,224 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detail Balita - SIPSTU</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap');
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --blue-950: #0a1628; --blue-900: #0f2044; --blue-800: #163060;
-      --blue-700: #1e4080; --blue-600: #2563a8; --blue-500: #3b82d4;
-      --blue-400: #60a5f0; --blue-300: #93c5fd; --blue-100: #dbeafe; --blue-50: #eff6ff;
-      --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
-      --text-primary: #0f172a; --text-secondary: #475569; --text-muted: #94a3b8;
-      --border: #e2e8f0; --surface: #f8fafc; --white: #ffffff;
-    }
-    body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: var(--text-primary); height: 100vh; overflow: hidden; }
-    .layout { display: flex; height: 100vh; width: 100vw; overflow: hidden; }
 
-    /* SIDEBAR */
-    .sidebar { width: 240px; background: var(--blue-950); display: flex; flex-direction: column; flex-shrink: 0; position: relative; overflow: hidden; }
-    .sidebar-logo { padding: 24px 20px 20px; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .logo-badge { display: inline-flex; align-items: center; gap: 10px; }
-    .logo-icon { width: 34px; height: 34px; background: var(--blue-500); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 13px; color: white; }
-    .logo-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; color: white; line-height: 1.2; }
-    .logo-sub { font-size: 10px; color: rgba(255,255,255,0.4); }
-    .puskesmas-pill { margin: 12px 20px; background: rgba(59,130,212,0.15); border: 1px solid rgba(59,130,212,0.3); border-radius: 8px; padding: 10px 12px; }
-    .puskesmas-pill-label { font-size: 10px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
-    .puskesmas-pill-name { font-size: 13px; color: white; font-weight: 600; margin-top: 2px; }
-    .puskesmas-pill-sub { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 1px; }
-    .sidebar-section { padding: 16px 12px 4px; }
-    .sidebar-label { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.3); letter-spacing: 1px; text-transform: uppercase; padding: 0 8px 8px; }
-    .nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 8px; font-size: 13px; color: rgba(255,255,255,0.55); cursor: pointer; transition: all 0.15s; margin-bottom: 2px; font-weight: 500; text-decoration: none; }
-    .nav-item:hover { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.9); text-decoration: none; }
-    .nav-item.active { background: var(--blue-700); color: white; }
-    .nav-item .icon { width: 16px; height: 16px; flex-shrink: 0; }
-    .sidebar-footer { margin-top: auto; padding: 16px 12px; border-top: 1px solid rgba(255,255,255,0.07); }
-    .user-card { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 8px; cursor: pointer; }
-    .user-card:hover { background: rgba(255,255,255,0.06); }
-    .avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--blue-600); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; flex-shrink: 0; }
-    .user-name { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.85); }
-    .user-role { font-size: 10px; color: rgba(255,255,255,0.35); }
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Detail Balita - SIPSTU</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap');
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--blue-950: #0a1628;
+			--blue-900: #0f2044;
+			--blue-800: #163060;
+			--blue-700: #1e4080;
+			--blue-600: #2563a8;
+			--blue-500: #3b82d4;
+			--blue-400: #60a5f0;
+			--blue-300: #93c5fd;
+			--blue-100: #dbeafe;
+			--blue-50: #eff6ff;
+			--success: #10b981;
+			--warning: #f59e0b;
+			--danger: #ef4444;
+			--text-primary: #0f172a;
+			--text-secondary: #475569;
+			--text-muted: #94a3b8;
+			--border: #e2e8f0;
+			--surface: #f8fafc;
+			--white: #ffffff;
+		}
+
+		body {
+			font-family: 'DM Sans', sans-serif;
+			background: var(--surface);
+			color: var(--text-primary);
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.layout {
+			display: flex;
+			height: 100vh;
+			width: 100vw;
+			overflow: hidden;
+		}
+
+		/* SIDEBAR */
+		.sidebar {
+			width: 240px;
+			background: var(--blue-950);
+			display: flex;
+			flex-direction: column;
+			flex-shrink: 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.sidebar-logo {
+			padding: 24px 20px 20px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+		}
+
+		.logo-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.logo-icon {
+			width: 34px;
+			height: 34px;
+			background: var(--blue-500);
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: 'Plus Jakarta Sans', sans-serif;
+			font-weight: 700;
+			font-size: 13px;
+			color: white;
+		}
+
+		.logo-text {
+			font-family: 'Plus Jakarta Sans', sans-serif;
+			font-weight: 700;
+			font-size: 15px;
+			color: white;
+			line-height: 1.2;
+		}
+
+		.logo-sub {
+			font-size: 10px;
+			color: rgba(255, 255, 255, 0.4);
+		}
+
+		.puskesmas-pill {
+			margin: 12px 20px;
+			background: rgba(59, 130, 212, 0.15);
+			border: 1px solid rgba(59, 130, 212, 0.3);
+			border-radius: 8px;
+			padding: 10px 12px;
+		}
+
+		.puskesmas-pill-label {
+			font-size: 10px;
+			color: rgba(255, 255, 255, 0.35);
+			text-transform: uppercase;
+			letter-spacing: 0.8px;
+			font-weight: 600;
+		}
+
+		.puskesmas-pill-name {
+			font-size: 13px;
+			color: white;
+			font-weight: 600;
+			margin-top: 2px;
+		}
+
+		.puskesmas-pill-sub {
+			font-size: 10px;
+			color: rgba(255, 255, 255, 0.4);
+			margin-top: 1px;
+		}
+
+		.sidebar-section {
+			padding: 16px 12px 4px;
+		}
+
+		.sidebar-label {
+			font-size: 10px;
+			font-weight: 600;
+			color: rgba(255, 255, 255, 0.3);
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			padding: 0 8px 8px;
+		}
+
+		.nav-item {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 9px 10px;
+			border-radius: 8px;
+			font-size: 13px;
+			color: rgba(255, 255, 255, 0.55);
+			cursor: pointer;
+			transition: all 0.15s;
+			margin-bottom: 2px;
+			font-weight: 500;
+			text-decoration: none;
+		}
+
+		.nav-item:hover {
+			background: rgba(255, 255, 255, 0.07);
+			color: rgba(255, 255, 255, 0.9);
+			text-decoration: none;
+		}
+
+		.nav-item.active {
+			background: var(--blue-700);
+			color: white;
+		}
+
+		.nav-item .icon {
+			width: 16px;
+			height: 16px;
+			flex-shrink: 0;
+		}
+
+		.sidebar-footer {
+			margin-top: auto;
+			padding: 16px 12px;
+			border-top: 1px solid rgba(255, 255, 255, 0.07);
+		}
+
+		.user-card {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 8px;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+		.user-card:hover {
+			background: rgba(255, 255, 255, 0.06);
+		}
+
+		.avatar {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			background: var(--blue-600);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 12px;
+			font-weight: 700;
+			color: white;
+			flex-shrink: 0;
+		}
+
+		.user-name {
+			font-size: 12px;
+			font-weight: 600;
+			color: rgba(255, 255, 255, 0.85);
+		}
+
+		.user-role {
+			font-size: 10px;
+			color: rgba(255, 255, 255, 0.35);
+		}
 
     /* MAIN */
     .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: #fafafa; }
@@ -61,16 +237,59 @@
     .btn-primary-custom { background: var(--blue-600); color: white; border: none; border-radius: 8px; padding: 10px 18px; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; text-decoration: none;}
     .btn-primary-custom:hover { background: var(--blue-700); color: white; transform: translateY(-1px); }
 
-    /* CARD & TABLE */
-    .card-custom { background: white; border-radius: 12px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-    .table-custom { width: 100%; margin-bottom: 0; border-collapse: collapse; }
-    .table-custom th { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 20px; background: var(--surface); border-bottom: 1px solid var(--border); text-align: left; }
-    .table-custom td { padding: 14px 20px; font-size: 13px; color: var(--text-secondary); border-bottom: 1px solid var(--border); vertical-align: middle; }
-    .table-custom tr:last-child td { border-bottom: none; }
-    .table-custom tr:hover td { background: var(--surface); }
-    .item-title { font-weight: 700; color: var(--text-primary); font-size: 14px; margin-bottom: 2px; font-family: 'Plus Jakarta Sans', sans-serif;}
-  </style>
+		/* CARD & TABLE */
+		.card-custom {
+			background: white;
+			border-radius: 12px;
+			border: 1px solid var(--border);
+			overflow: hidden;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+		}
+
+		.table-custom {
+			width: 100%;
+			margin-bottom: 0;
+			border-collapse: collapse;
+		}
+
+		.table-custom th {
+			font-size: 11px;
+			font-weight: 600;
+			color: var(--text-muted);
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			padding: 12px 20px;
+			background: var(--surface);
+			border-bottom: 1px solid var(--border);
+			text-align: left;
+		}
+
+		.table-custom td {
+			padding: 14px 20px;
+			font-size: 13px;
+			color: var(--text-secondary);
+			border-bottom: 1px solid var(--border);
+			vertical-align: middle;
+		}
+
+		.table-custom tr:last-child td {
+			border-bottom: none;
+		}
+
+		.table-custom tr:hover td {
+			background: var(--surface);
+		}
+
+		.item-title {
+			font-weight: 700;
+			color: var(--text-primary);
+			font-size: 14px;
+			margin-bottom: 2px;
+			font-family: 'Plus Jakarta Sans', sans-serif;
+		}
+	</style>
 </head>
+
 <body>
 
 <div class="layout">
@@ -393,4 +612,5 @@ function hitungModalZ() {
 </script>
 <script src="<?= base_url('assets/js/responsive.js?v=1.4') ?>"></script>
 </body>
+
 </html>
