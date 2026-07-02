@@ -354,12 +354,12 @@
 
 <div class="legend-item">
   <div class="legend-dot" style="background:#f59e0b;"></div>
-  1 Kasus Stunting
+   Gejala Stunting
 </div>
 
 <div class="legend-item">
   <div class="legend-dot" style="background:#ef4444;"></div>
-  > 1 Kasus Stunting
+   Kasus Stunting
 </div>
         </div>
         <div class="panel-body">

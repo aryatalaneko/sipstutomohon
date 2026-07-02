@@ -251,7 +251,7 @@
         </div>
         <div class="map-legend">
           <div class="legend-item"><div class="legend-dot" style="background: var(--success);"></div>Normal</div>
-          <div class="legend-item"><div class="legend-dot" style="background: var(--warning);"></div>Stunting</div>
+          <div class="legend-item"><div class="legend-dot" style="background: var(--warning);"></div> Gejala Stunting</div>
           <div class="legend-item"><div class="legend-dot" style="background: var(--danger);"></div>Sangat Pendek</div>
         </div>
         <div class="panel-body">

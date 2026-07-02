@@ -529,7 +529,7 @@ class Welcome extends CI_Controller
                     $stunt++;
                 } else {
                     $norm++;
-                }
+				}
             }
         }
         $overall['normal'][]       = $norm;

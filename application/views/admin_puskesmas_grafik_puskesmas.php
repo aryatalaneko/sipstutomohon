@@ -172,7 +172,7 @@
   <!-- MAIN -->
   <div class="main">
   <div class="topbar">
-  <div style="display: flex; align-items: center; gap: 12px;">
+  <div style="display: flex; align-items: center; gap: 16px;">
     <span class="topbar-title">Grafik Stunting per Puskesmas</span>
     <span class="topbar-sub">— 6 Bulan Terakhir</span>
   </div>
