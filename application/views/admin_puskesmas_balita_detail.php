@@ -220,102 +220,22 @@
 			color: rgba(255, 255, 255, 0.35);
 		}
 
-		/* MAIN */
-		.main {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			overflow: hidden;
-			background: #fafafa;
-		}
-
-		.content {
-			flex: 1;
-			padding: 24px 28px;
-			overflow-y: auto;
-		}
-
-		/* TOPBAR & HEADER */
-		.topbar {
-			background: white;
-			border-bottom: 1px solid var(--border);
-			padding: 0 28px;
-			height: 60px;
-			display: flex;
-			align-items: center;
-			gap: 12px;
-			flex-shrink: 0;
-		}
-
-		.topbar-back {
-			width: 32px;
-			height: 32px;
-			border-radius: 8px;
-			border: 1px solid var(--border);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			cursor: pointer;
-			color: var(--text-secondary);
-			transition: all 0.2s;
-			text-decoration: none;
-		}
-
-		.topbar-back:hover {
-			background: var(--surface);
-			color: var(--text-primary);
-			border-color: var(--text-muted);
-		}
-
-		.breadcrumb {
-			display: flex;
-			align-items: center;
-			gap: 8px;
-			font-size: 13px;
-			font-weight: 500;
-			margin-bottom: 0;
-		}
-
-		.breadcrumb-link {
-			color: var(--text-muted);
-			cursor: pointer;
-			text-decoration: none;
-		}
-
-		.breadcrumb-link:hover {
-			color: var(--blue-600);
-		}
-
-		.breadcrumb-sep {
-			color: var(--border);
-			font-size: 14px;
-		}
-
-		.breadcrumb-current {
-			color: var(--text-primary);
-			font-weight: 600;
-		}
-
-		.btn-primary-custom {
-			background: var(--blue-600);
-			color: white;
-			border: none;
-			border-radius: 8px;
-			padding: 10px 18px;
-			font-size: 13px;
-			font-weight: 600;
-			display: inline-flex;
-			align-items: center;
-			gap: 8px;
-			transition: all 0.2s;
-			text-decoration: none;
-		}
-
-		.btn-primary-custom:hover {
-			background: var(--blue-700);
-			color: white;
-			transform: translateY(-1px);
-		}
+    /* MAIN */
+    .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: #fafafa; }
+    .content { flex: 1; padding: 24px 28px; overflow-y: auto; }
+    
+    /* TOPBAR & HEADER */
+    .topbar { background: white; border-bottom: 1px solid var(--border); padding: 0 28px; height: 60px; display: flex; justify-content: flex-start;  align-items: center; gap:12px; flex-shrink:0; }
+    .topbar-back { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-secondary); transition: all 0.2s; text-decoration: none; }
+    .topbar-back:hover { background: var(--surface); color: var(--text-primary); border-color: var(--text-muted); }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; margin-bottom: 0; }
+    .breadcrumb-link { color: var(--text-muted); cursor: pointer; text-decoration: none;}
+    .breadcrumb-link:hover { color: var(--blue-600); }
+    .breadcrumb-sep { color: var(--border); font-size: 14px; }
+    .breadcrumb-current { color: var(--text-primary); font-weight: 600; }
+    
+    .btn-primary-custom { background: var(--blue-600); color: white; border: none; border-radius: 8px; padding: 10px 18px; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; text-decoration: none;}
+    .btn-primary-custom:hover { background: var(--blue-700); color: white; transform: translateY(-1px); }
 
 		/* CARD & TABLE */
 		.card-custom {
